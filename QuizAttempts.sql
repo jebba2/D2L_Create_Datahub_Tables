@@ -1,0 +1,46 @@
+CREATE TABLE `QuizAttempts` (
+  `AttemptId` bigint NOT NULL,
+  `QuizId` bigint DEFAULT NULL,
+  `UserId` int DEFAULT NULL,
+  `OrgUnitId` int DEFAULT NULL,
+  `AttemptNumber` int DEFAULT NULL,
+  `TimeStarted` datetime DEFAULT NULL,
+  `TimeCompleted` datetime DEFAULT NULL,
+  `Score` decimal(19,9) DEFAULT NULL,
+  `IsGraded` tinyint DEFAULT NULL,
+  `OldAttemptNumber` int DEFAULT NULL,
+  `IsDeleted` tinyint DEFAULT NULL,
+  `PossibleScore` decimal(19,9) DEFAULT NULL,
+  `IsRetakeIncorrectOnly` tinyint DEFAULT NULL,
+  `DueDate` datetime DEFAULT NULL,
+  `TimeLimit` int DEFAULT NULL,
+  `TimeLimitEnforced` tinyint DEFAULT NULL,
+  `TimeLimitExceededBehaviour` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `IsSynchronous` tinyint DEFAULT NULL,
+  `DeductionPercentage` int DEFAULT NULL,
+  UNIQUE KEY `AttemptId` (`AttemptId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+CREATE TABLE `QuizAttempts_LOAD` (
+  `AttemptId` bigint NOT NULL,
+  `QuizId` bigint DEFAULT NULL,
+  `UserId` int DEFAULT NULL,
+  `OrgUnitId` int DEFAULT NULL,
+  `AttemptNumber` int DEFAULT NULL,
+  `TimeStarted` datetime DEFAULT NULL,
+  `TimeCompleted` datetime DEFAULT NULL,
+  `Score` decimal(19,9) DEFAULT NULL,
+  `IsGraded` tinyint DEFAULT NULL,
+  `OldAttemptNumber` int DEFAULT NULL,
+  `IsDeleted` tinyint DEFAULT NULL,
+  `PossibleScore` decimal(19,9) DEFAULT NULL,
+  `IsRetakeIncorrectOnly` tinyint DEFAULT NULL,
+  `DueDate` datetime DEFAULT NULL,
+  `TimeLimit` int DEFAULT NULL,
+  `TimeLimitEnforced` tinyint DEFAULT NULL,
+  `TimeLimitExceededBehaviour` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `IsSynchronous` tinyint DEFAULT NULL,
+  `DeductionPercentage` int DEFAULT NULL,
+  UNIQUE KEY `AttemptId` (`AttemptId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
